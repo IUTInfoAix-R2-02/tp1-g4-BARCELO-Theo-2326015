@@ -33,6 +33,8 @@ public class Palette extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Création d'un conteneur VBox avec ses éléments centrés
         this.root = new BorderPane();
+        root.setPrefWidth(400);
+        root.setPrefWidth(200);
 
         // Création de la scene
         Scene scene = new Scene( root );
