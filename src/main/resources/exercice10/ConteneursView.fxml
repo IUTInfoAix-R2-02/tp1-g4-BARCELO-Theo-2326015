@@ -15,12 +15,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
 <BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <VBox id="top" prefHeight="0.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+      <VBox id="top" BorderPane.alignment="CENTER">
          <children>
-            <MenuBar prefWidth="684.0">
+            <MenuBar>
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
@@ -33,8 +32,8 @@
                 <Menu mnemonicParsing="false" text="Edit">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Cut" />
-                        <MenuItem mnemonicParsing="false" text="Copy" />
-                        <MenuItem mnemonicParsing="false" text="Paste" />
+                    <MenuItem mnemonicParsing="false" text="Copy" />
+                    <MenuItem mnemonicParsing="false" text="Paste" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help" />
@@ -44,22 +43,15 @@
       </VBox>
    </top>
    <bottom>
-      <VBox id="bottom" alignment="CENTER" prefHeight="30.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+      <VBox id="bottom" alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Separator prefWidth="200.0" />
+            <Separator />
             <Label text="Ceci est un label de bas de page" />
          </children>
       </VBox>
    </bottom>
-   <center>
-      <HBox prefHeight="541.0" prefWidth="0.0" BorderPane.alignment="CENTER">
-         <children>
-            <Separator orientation="VERTICAL" prefHeight="200.0" />
-         </children>
-      </HBox>
-   </center>
    <left>
-      <VBox id="left" alignment="CENTER" prefHeight="365.0" prefWidth="110.0" BorderPane.alignment="CENTER">
+      <VBox id="left" alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
             <Label text="Boutons :">
                <VBox.margin>
@@ -90,46 +82,52 @@
          </children>
       </VBox>
    </left>
-   <right>
-      <VBox id="right" alignment="CENTER" prefHeight="541.0" prefWidth="681.0" BorderPane.alignment="CENTER">
+   <center>
+      <VBox id="right" alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
-            <GridPane alignment="CENTER" hgap="10.0" prefHeight="0.0" prefWidth="0.0" vgap="10.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+            <HBox VBox.vgrow="ALWAYS">
                <children>
-                  <Label text="Name :" />
-                  <Label text="Email :" GridPane.rowIndex="1" />
-                  <Label text="Password :" GridPane.rowIndex="2" />
-                  <TextField alignment="CENTER" GridPane.columnIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               </children>
-               <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </VBox.margin>
-            </GridPane>
-            <HBox id="boutons" alignment="CENTER" prefHeight="0.0" prefWidth="508.0">
-               <children>
-                  <Button mnemonicParsing="false" text="Submit">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Button">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </Button>
+                  <Separator orientation="VERTICAL" />
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <GridPane alignment="CENTER" hgap="10.0" maxWidth="300.0" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Name :" />
+                              <Label text="Email :" GridPane.rowIndex="1" />
+                              <Label text="Password :" GridPane.rowIndex="2" />
+                              <TextField alignment="CENTER" GridPane.columnIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <HBox id="boutons" alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" text="Submit">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </HBox>
          </children>
       </VBox>
-   </right>
+   </center>
 </BorderPane>
